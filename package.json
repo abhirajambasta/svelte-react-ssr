@@ -1,0 +1,78 @@
+{
+  "name": "svelte-react-ssr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines" : { 
+    "npm" : ">=7.10.0 <9.0.0",
+    "node" : ">=16.0.0 <17.0.0"
+  },
+  "scripts": {
+    "webpack-build": "NODE_ENV=production webpack",
+    "webpack-watch": "webpack --watch",
+    "create-entry-scripts": "node scripts/create-client-entry-scripts.js",
+    "start": "npm run create-entry-scripts && npm run webpack-build && node dist/bundle.js"
+  },
+  "author": "Abhiraj Kumar",
+  "nodemonConfig": {
+    "ignore": [
+      "components/*",
+      "scss/*",
+      "server/ssr/*",
+      "server/static/*"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "7.8.3",
+    "@babel/node": "7.8.3",
+    "@babel/plugin-proposal-json-strings": "7.8.3",
+    "@babel/plugin-syntax-dynamic-import": "7.8.3",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-react": "7.8.3",
+    "babel-loader": "8.2.5",
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-export-default-from": "^7.8.3",
+    "@babel/plugin-proposal-export-namespace-from": "^7.8.3",
+    "@babel/plugin-proposal-function-sent": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.9.0",
+    "@babel/plugin-syntax-import-meta": "^7.8.3",
+    "@babel/plugin-transform-object-assign": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/runtime-corejs2": "^7.8.7",
+    "babel-plugin-import": "^1.13.0",
+    "babel-plugin-react-intl": "3.0.1",
+    "babel-plugin-react-intl-auto": "1.1.1",
+    "babel-plugin-styled-components": "^1.10.6",
+    "cross-env": "^7.0.2",
+    "dotenv-cli": "^3.2.0",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "babel-loader": "^8.0.6",
+    "chokidar": "^3.4.2",
+    "chokidar-cli": "^2.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "concurrently": "^5.3.0",
+    "fastify": "^3.3.0",
+    "fastify-compress": "^3.3.0",
+    "fastify-static": "^3.2.0",
+    "file-loader": "^6.1.0",
+    "node-fetch": "^3.3.0",
+    "node-fetch-commonjs": "^3.2.4",
+    "nodemon-webpack-plugin": "^4.3.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "rimraf": "^3.0.2",
+    "sass": "^1.26.10",
+    "sass-loader": "^10.0.2",
+    "svelte": "^3.24.1",
+    "svelte-loader": "^2.13.6",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-node-externals": "^2.5.2",
+    "webpack-watched-glob-entries-plugin": "^2.1.7"
+  }
+}
